@@ -43,4 +43,8 @@ InputTodo.propTypes = {
   addTodoItem: PropTypes.func,
 };
 
+InputTodo.defaultProps = {
+  addTodoItem: () => {},
+};
+
 export default InputTodo;

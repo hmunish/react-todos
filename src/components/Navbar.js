@@ -17,7 +17,7 @@ const Navbar = () => {
         <li ref={ref}>Home</li>
         <li>About</li>
         <li>
-          <button onClick={() => setDropdown(!dropdown)}>
+          <button onClick={() => setDropdown(!dropdown)} type="button">
             Services
             {' '}
             <span>&#8595;</span>

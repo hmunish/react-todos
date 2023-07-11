@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from '../styles/TodoItem.module.css';
 
 const TodoItem = ({ itemProp, handleChange, delTodo }) => (
@@ -8,9 +9,24 @@ const TodoItem = ({ itemProp, handleChange, delTodo }) => (
         checked={itemProp.completed}
         onChange={() => handleChange(itemProp.id)}
       />
-      <button onClick={() => delTodo(itemProp.id)}>Delete</button>
+      <button type="button" onClick={() => delTodo(itemProp.id)}>
+        Delete
+      </button>
       {itemProp.title}
     </div>
   </li>
 );
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.func,
+  handleChange: PropTypes.func,
+  delTodo: PropTypes.func,
+};
+
+TodoItem.defaultProps = {
+  itemProp: {},
+  handleChange: () => {},
+  delTodo: () => {},
+};
+
 export default TodoItem;
