@@ -18,7 +18,7 @@ const TodosList = (props) => {
 };
 
 TodosList.propTypes = {
-  todosProps: PropTypes.func,
+  todosProps: PropTypes.node,
   handleChange: PropTypes.func,
   delTodo: PropTypes.func,
 };

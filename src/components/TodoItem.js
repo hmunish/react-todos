@@ -18,7 +18,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo }) => (
 );
 
 TodoItem.propTypes = {
-  itemProp: PropTypes.func,
+  itemProp: PropTypes.node,
   handleChange: PropTypes.func,
   delTodo: PropTypes.func,
 };
