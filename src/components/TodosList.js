@@ -18,13 +18,13 @@ const TodosList = (props) => {
 };
 
 TodosList.propTypes = {
-  todosProps: PropTypes.node,
+  todosProps: PropTypes.array,
   handleChange: PropTypes.func,
   delTodo: PropTypes.func,
 };
 
 TodosList.defaultProps = {
-  todosProps: () => {},
+  todosProps: [],
   handleChange: () => {},
   delTodo: () => {},
 };
