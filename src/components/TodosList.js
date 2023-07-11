@@ -1,5 +1,5 @@
-/*eslint-disable */
-import TodoItem from "./TodoItem";
+import TodoItem from './TodoItem';
+
 const TodosList = (props) => {
   const { todosProps, handleChange, delTodo } = props;
   return (

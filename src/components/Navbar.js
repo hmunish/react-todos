@@ -1,5 +1,5 @@
-/*eslint-disable */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
+
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
   const ref = useRef();
@@ -9,7 +9,7 @@ const Navbar = () => {
         setDropdown(false);
       }
     };
-    document.addEventListener("mousedown", handler);
+    document.addEventListener('mousedown', handler);
   }, [dropdown]);
   return (
     <nav>
@@ -18,7 +18,9 @@ const Navbar = () => {
         <li>About</li>
         <li>
           <button onClick={() => setDropdown(!dropdown)}>
-            Services <span>&#8595;</span>
+            Services
+            {' '}
+            <span>&#8595;</span>
           </button>
           {dropdown && (
             <ul>

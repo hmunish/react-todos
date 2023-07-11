@@ -1,9 +1,9 @@
-/*eslint-disable */
-import { useState } from "react";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const InputTodo = ({ addTodoItem }) => {
-  const [title, setTitle] = useState("");
-  const [message, setMessage] = useState("");
+  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = (event) => {
     setTitle(event.target.value);
@@ -13,10 +13,10 @@ const InputTodo = ({ addTodoItem }) => {
     event.preventDefault();
     if (title.trim()) {
       addTodoItem(title);
-      setTitle("");
-      setMessage("");
+      setTitle('');
+      setMessage('');
     } else {
-      setMessage("Please enter valid input");
+      setMessage('Please enter valid input');
     }
   };
 
@@ -30,11 +30,17 @@ const InputTodo = ({ addTodoItem }) => {
           onChange={handleChange}
           className="input-text"
         />
-        <button className="input-submit">Submit</button>
+        <button className="input-submit" type="submit">
+          Submit
+        </button>
       </form>
       <span className="submit-warning">{message}</span>
     </>
   );
+};
+
+InputTodo.propTypes = {
+  addTodoItem: PropTypes.func,
 };
 
 export default InputTodo;
